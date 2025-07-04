@@ -4,7 +4,7 @@
 @use "@scss/abstract/index";
 
 // ==================== VARIABLES ====================
-$gutter: 30px;
+$gutter: 36px;
 
 // ==================== MIXINS ====================
 @mixin respond-min($key) {
@@ -119,7 +119,7 @@ $gutter: 30px;
   position: relative;
   width: 100%;
   max-width: 120rem;
-  padding: 0 1rem;
+  padding: 0 18px;
   margin: 0 auto;
   z-index: 1;
   @include index.minMedia(550px) {
