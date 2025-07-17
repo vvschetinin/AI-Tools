@@ -14,16 +14,21 @@
 
 .hero--large {
   height: auto;
-  padding: 12rem 0 10rem 0;
+  padding: 150px 0 120px 0;
   @include index.minMedia(550px) {
-    padding: 0;
-    height: 100vh;
-    max-height: 900px;
+    min-height: 42.5rem;
   }
   @include index.minMedia(800px) {
+    min-height: 52.5rem;
     max-height: calc(1100px - 20vh);
   }
   @include index.minMedia(1400px) {
+    height: 100vh;
+    min-height: 58.5rem;
+    max-height: calc(1400px - 25vh);
+  }
+  @include index.minMedia(1650px) {
+    min-height: 62.5rem;
     max-height: calc(1400px - 25vh);
   }
   @include index.mobileLandscape {
