@@ -98,12 +98,22 @@
     &:before {
       content: "";
       display: block;
-      width: 15px;
+      width: 10px;
       height: 2px;
       background-color: #18e591;
       position: absolute;
-      left: -25px;
+      left: -20px;
       top: 15px;
+      @include index.minMedia(550px) {
+        width: 15px;
+        left: -25px;
+      }
     }
+  }
+  span {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    padding-right: 0.3rem;
   }
 }
