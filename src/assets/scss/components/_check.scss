@@ -31,7 +31,9 @@
   }
   .banner-text {
     margin: 0;
-    margin-right: 20px;
+    @include index.minMedia(800px) {
+      margin-right: 20px;
+    }
     a {
       color: #3498db; /* Ярко-синий для ссылки */
       text-decoration: underline;
