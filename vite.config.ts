@@ -20,9 +20,10 @@ export default defineConfig(({ mode }) => ({
         blog: path.resolve(root, "pages/blog/index.html"),
         faq: path.resolve(root, "pages/faq/index.html"),
         contacts: path.resolve(root, "pages/contacts/index.html"),
+        privacy: path.resolve(root, "pages/privacy/index.html"),
         // ======================== inner services ========================
         aibots: path.resolve(root, "pages/services/aibots/index.html"),
-        optimization: path.resolve(root, "pages/services/optimization/index.html"),
+        optimization: path.resolve(root, "pages/services/mailmarket/index.html"),
         content: path.resolve(root, "pages/services/content/index.html"),
         castom: path.resolve(root, "pages/services/castom/index.html"),
         // ================================================================
