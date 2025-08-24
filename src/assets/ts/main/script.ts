@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", debounce(equalizeServiceItemHeights, 100));
 });
 
-// Указание на защиту авторских прав
+// ================ Указание на защиту авторских прав ===========
 
 // Ищем элемент внутри .footer-copyright — первый span, где нужно заменить год
 const footer = document.querySelector(".footer-copyright");
