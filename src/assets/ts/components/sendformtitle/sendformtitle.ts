@@ -7,7 +7,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     // Выбираем все необходимые элементы
     const contactButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll(".js-startproject");
-    const formTitle: HTMLHeadingElement | null = document.querySelector(".h1-inner");
+    const formTitle: HTMLHeadingElement | null = document.querySelector(".mainform-title");
     const subjectInput: HTMLInputElement | null = document.querySelector('input[name="subject"]');
     // Проверяем, что все элементы найдены
     if (contactButtons.length === 0 || !formTitle || !subjectInput) {
