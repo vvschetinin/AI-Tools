@@ -108,23 +108,56 @@ if (formButton && formCheck) {
   console.error("Один из элементов формы не найден");
 }
 
-// ================== Accordeon FAQ ===================
+// ================== Random 5 FAQ & Accordeon ===================
+
+// Вспомогательная функция для перемешивания массива (алгоритм Фишера-Йейтса)
+function shuffleArray<T>(array: T[]): T[] {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Получаем все вопросы с типом HTMLElement
-  const questions: NodeListOf<HTMLElement> = document.querySelectorAll(".faq-question");
+  // 1. Логика случайного выбора 5 блоков
+  const faqList = document.querySelector<HTMLUListElement>(".faq-list");
 
-  questions.forEach((question: HTMLElement) => {
+  if (faqList) {
+    // Преобразуем NodeList элементов li в массив
+    const allItems = Array.from(faqList.querySelectorAll("li")) as HTMLLIElement[];
+
+    // Если элементов больше 5, перемешиваем и обрезаем
+    if (allItems.length > 5) {
+      const shuffledItems = shuffleArray(allItems);
+      const selectedItems = shuffledItems.slice(0, 5);
+
+      // Очищаем список и добавляем только выбранные элементы
+      faqList.innerHTML = "";
+      selectedItems.forEach((item) => {
+        faqList.appendChild(item);
+      });
+    }
+  }
+
+  // 2. Логика Аккордеона (применяется уже к отфильтрованному списку)
+  const questions = document.querySelectorAll<HTMLElement>(".faq-question");
+
+  questions.forEach((question) => {
     question.addEventListener("click", () => {
-      // Находим следующий элемент (ответ) с типом HTMLElement или null
-      const answer: HTMLElement | null = question.nextElementSibling as HTMLElement | null;
-      const isActive: boolean = question.classList.contains("active");
+      // Находим следующий элемент (ответ)
+      const answer = question.nextElementSibling as HTMLElement | null;
+      const isActive = question.classList.contains("active");
+
+      // Сначала закрываем все активные (опционально, если нужно, чтобы открыт был только один)
+      // Если хотите, чтобы открывалось несколько, этот блок можно пропустить или изменить логику
+      // Здесь оставлена ваша оригинальная логика toggle
 
       if (isActive) {
         question.classList.remove("active");
         if (answer) {
           answer.classList.remove("active");
-          answer.style.maxHeight = "0"; // Закрываем с анимацией
+          answer.style.maxHeight = "0";
         }
       } else {
         question.classList.add("active");
