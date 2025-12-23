@@ -13,7 +13,10 @@
     padding-top: 2.2vw;
   }
   .logo-svg{
-    width: 15rem;
+    width: 14rem;
+    transition: width 0.4s cubic-bezier(0.16, 0.43, 0, 1);
+    // Опционально: для предотвращения "мыла" при ресайзе в некоторых браузерах
+    will-change: width;
   }
   .svg-title {
     font-family: "Din-2014", sans-serif;
@@ -95,32 +98,6 @@
         opacity: 1;
         visibility: visible;
       }
-    }
-  }
-}
-
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.16, 0.43, 0, 1);
-  color: #fff;
-  &--large {
-    padding: 2.75vw 0;
-    padding-top: 2.2vw;
-  }
-  .logo-svg{
-    width: 15rem;
-  }
-  &.is-active {
-    max-height: none;
-    padding: 1.25rem 0;
-    background: #050029;
-    .logo-svg{
-      width: 10rem;
     }
   }
 }
