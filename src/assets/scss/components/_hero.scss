@@ -38,12 +38,11 @@
 }
 
 .hero--small {
-  height: 62vh;
-  min-height: 680px;
-  min-height: 42.5rem;
-  max-height: calc(650px - 15vh);
-  @include index.minMedia(800px) {
-    max-height: none;
+  height: auto;
+  min-height: 47.5rem;
+  //max-height: calc(650px - 15vh);
+  @include index.minMedia(1400px) {
+    min-height: 52rem;
   }
 }
 

@@ -10,17 +10,23 @@
   color: #fff;
   &--large {
     padding: 2.75vw 0;
-    padding-top: 2.2vw;
-  }
-  &--small {
-    padding: 2.75vw 0;
-    padding-top: 1.45vw;
+    @include index.minMedia(1100px) {
+      padding-top: 2.2vw;
+    }
   }
   .logo-svg{
-    width: 14rem;
+    width: 8rem;
     transition: width 0.4s cubic-bezier(0.16, 0.43, 0, 1);
-    // Опционально: для предотвращения "мыла" при ресайзе в некоторых браузерах
     will-change: width;
+    @include index.minMedia(800px) {
+      width: 10rem;
+    }
+    @include index.minMedia(1100px) {
+      width: 12rem;
+    }
+    @include index.minMedia(1800px) {
+      width: 14rem;
+    }
   }
   .svg-title {
     font-family: "Din-2014", sans-serif;
@@ -36,10 +42,18 @@
   }
   &.is-active {
     max-height: none;
-    padding: 1.25rem 0;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
     background: #050029;
+    @include index.minMedia(1100px) {
+      padding: 1.25rem 0;
+      padding-bottom: 1.25rem;
+    }
     .logo-svg{
-      width: 10rem;
+      width: 8rem;
+      @include index.minMedia(800px) {
+        width: 10rem;
+      }
     }
   }
 }
@@ -88,6 +102,10 @@
       visibility: hidden;
       width: 17.857vw;
       z-index: -1;
+      display: none;
+      @include index.minMedia(1100px) {
+        display: block;
+      }
     }
   }
   &.is-active{
