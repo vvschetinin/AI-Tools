@@ -1,7 +1,8 @@
-import "@/assets/ts/components/inputmask/main";
-import "@/assets/ts/components/myslider/main";
 import "@/assets/ts/components/cookie/main";
+import "@/assets/ts/components/equalizer/equalizer";
 import "@/assets/ts/components/formsend/formsend";
+import "@/assets/ts/components/inputmask/main";
+import "@/assets/ts/components/lazyvideo/lazy-video";
+import "@/assets/ts/components/myslider/main";
 import "@/assets/ts/components/sendformtitle/sendformtitle";
 import "@/assets/ts/main/script";
-import "@/assets/ts/components/lazyvideo/lazy-video";
