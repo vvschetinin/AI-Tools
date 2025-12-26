@@ -16,19 +16,19 @@
   height: auto;
   padding: 150px 0 120px 0;
   @include index.minMedia(550px) {
-    min-height: 42.5rem;
+    min-height: 55rem;
   }
   @include index.minMedia(800px) {
-    min-height: 52.5rem;
+    min-height: 55rem;
     max-height: calc(1100px - 20vh);
   }
   @include index.minMedia(1400px) {
     height: 100vh;
-    min-height: 58.5rem;
+    min-height: 60rem;
     max-height: calc(1400px - 25vh);
   }
   @include index.minMedia(1650px) {
-    min-height: 62.5rem;
+    min-height: 75rem;
     max-height: calc(1400px - 25vh);
   }
   @include index.mobileLandscape {
@@ -105,16 +105,16 @@
     text-align: left;
   }
   @include index.minMedia(1100px) {
-    max-width: 70vw;
+    max-width: 75vw;
     min-width: 600px;
     //padding-top: 5rem;
   }
   @include index.minMedia(1400px) {
-    max-width: 60vw;
+    max-width: 75vw;
     min-width: 600px;
   }
   @include index.minMedia(1800px) {
-    max-width: 50vw;
+    max-width: 60vw;
     min-width: 600px;
   }
   .hero-text {
