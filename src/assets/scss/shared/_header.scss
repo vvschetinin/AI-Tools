@@ -42,15 +42,21 @@
   }
   &.is-active {
     max-height: none;
-    padding: 1rem 0;
-    padding-bottom: 2rem;
+    padding: 2.5vw 0;
     background: #050029;
+    @include index.minMedia(1100px) {
+      padding: 1rem 0;
+      padding-bottom: 2rem;
+    }
     @include index.minMedia(1100px) {
       padding: 1.25rem 0;
       padding-bottom: 1.25rem;
     }
     .logo-svg{
-      width: 8rem;
+      width: 7.2rem;
+      @include index.minMedia(550px) {
+        width: 8rem;
+      }
       @include index.minMedia(800px) {
         width: 10rem;
       }
@@ -111,10 +117,13 @@
   &.is-active{
     .header-logo {
       position: absolute;
-      top: 58%;
+      top: 50%;
       transform: translateY(-35%);
       left: 0px;
       display: inline-block;
+      @include index.minMedia(550px) {
+        top: 58%;
+      }
       &:after {
         bottom: -10px;
         opacity: 1;
