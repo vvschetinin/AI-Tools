@@ -3,6 +3,7 @@
 section,
 .section {
   position: relative;
+  padding-top: 1rem;
   z-index: 1;
   &--inner {
     @extend .section;
