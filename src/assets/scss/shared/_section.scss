@@ -5,19 +5,6 @@ section,
   position: relative;
   padding-top: 1rem;
   z-index: 1;
-  &--inner {
-    @extend .section;
-    padding-bottom: 35px;
-    @include index.minMedia(550px) {
-      padding-bottom: 50px;
-    }
-    @include index.minMedia(1100px) {
-      padding-bottom: 70px;
-    }
-    @include index.minMedia(1400px) {
-      padding-bottom: 100px;
-    }
-  }
 }
 
 .section-type {
@@ -26,5 +13,15 @@ section,
   padding: 3.75rem 0;
   @include index.minMedia(800px) {
     padding: 6rem 0;
+  }
+}
+
+.section-inner {
+  @extend section;
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 3.75rem;
+  @include index.minMedia(800px) {
+    padding-bottom: 6rem;
   }
 }
