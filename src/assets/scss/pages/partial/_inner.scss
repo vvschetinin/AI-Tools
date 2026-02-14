@@ -1,13 +1,13 @@
 @use "@scss/abstract/index";
 
-.section-inner {
-  position: relative;
-  z-index: 1;
-  padding-bottom: 3.75rem;
-  @include index.minMedia(800px) {
-    padding-bottom: 6rem;
-  }
-}
+// .section-inner {
+//   position: relative;
+//   z-index: 1;
+//   padding-bottom: 3.75rem;
+//   @include index.minMedia(800px) {
+//     padding-bottom: 6rem;
+//   }
+// }
 
 .hero-inner {
   padding: 180px 0 30px;

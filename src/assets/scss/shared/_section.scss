@@ -20,8 +20,17 @@ section,
   @extend section;
   height: auto;
   padding-top: 0;
-  padding-bottom: 3.75rem;
+  padding-bottom: 3.75vw;
   @include index.minMedia(800px) {
-    padding-bottom: 6rem;
+    padding-bottom: 3vw;
+  }
+  @include index.minMedia(1400px) {
+    padding-bottom: 2vw;
+  }
+  & + .innerend {
+    padding-bottom: 3.75rem;
+    @include index.minMedia(800px) {
+      padding-bottom: 6rem;
+    }
   }
 }
