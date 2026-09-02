@@ -89,24 +89,24 @@
 
 .services-list {
   margin-bottom: 1.1rem;
-  padding-left: 25px;
+  padding-left: 0;
   @include index.minMedia(800px) {
     margin-bottom: 1.4rem;
+    padding-left: 25px;
   }
   li {
     position: relative;
     &:before {
-      content: "";
-      display: block;
-      width: 10px;
-      height: 2px;
-      background-color: #18e591;
-      position: absolute;
-      left: -20px;
-      top: 15px;
+      content: "\25CF"; /* Или "\25CF" */
+      color: #fff;
+      font-size: 1.2rem; /* Размер кружочка */
+      line-height: 1;
+      margin-right: 10px;
+      vertical-align: middle; /* Отличное выравнивание по центру строки */
       @include index.minMedia(550px) {
         width: 15px;
         left: -25px;
+        margin-right: 10px;
       }
     }
   }
@@ -115,5 +115,16 @@
     font-weight: 400;
     color: #fff;
     padding-right: 0.3rem;
+  }
+}
+
+.card-tariff {
+  padding: 1rem 1.5rem;
+  .titlecard {
+    display: block;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.4rem;
+    padding-top: 0.7rem;
   }
 }

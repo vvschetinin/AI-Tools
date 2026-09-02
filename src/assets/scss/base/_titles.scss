@@ -49,18 +49,36 @@
 }
 
 .h2-title {
-  font-size: 30px;
+  font-size: 42px;
   @include index.minMedia(550px) {
-    font-size: 2.1rem;
+    font-size: 3rem;
   }
   @include index.minMedia(800px) {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
   }
   @include index.minMedia(1400px) {
-    font-size: 2.7rem;
+    font-size: 3.8rem;
   }
   @media (max-height: 450px) and (orientation: landscape) {
     font-size: 30px;
+  }
+  span {
+    display: block;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+    font-size: 20px;
+    @include index.minMedia(550px) {
+      font-size: 1.5rem;
+    }
+    @include index.minMedia(800px) {
+      font-size: 1.75rem;
+    }
+    @include index.minMedia(1400px) {
+      font-size: 1.85rem;
+    }
+    @media (max-height: 450px) and (orientation: landscape) {
+      font-size: 24px;
+    }
   }
 }
 
