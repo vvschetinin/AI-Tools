@@ -1,5 +1,5 @@
-import path from "path";
 import { fileURLToPath, URL } from "node:url";
+import path from "path";
 import { defineConfig } from "vite";
 
 const aliases = {
@@ -22,10 +22,10 @@ export default defineConfig(({ mode }) => ({
         contacts: path.resolve(root, "pages/contacts/index.html"),
         privacy: path.resolve(root, "pages/privacy/index.html"),
         // ======================== inner services ========================
-        aibots: path.resolve(root, "pages/services/aibots/index.html"),
-        optimization: path.resolve(root, "pages/services/mailmarket/index.html"),
+        faqbots: path.resolve(root, "pages/services/faqbots/index.html"),
+        landingpage: path.resolve(root, "pages/services/landingpage/index.html"),
         content: path.resolve(root, "pages/services/content/index.html"),
-        castom: path.resolve(root, "pages/services/castom/index.html"),
+        quizzes: path.resolve(root, "pages/services/quizzes/index.html"),
         // ================================================================
         err404: path.resolve(root, "pages/error/index.html"),
       },
