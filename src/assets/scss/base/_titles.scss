@@ -40,7 +40,10 @@
       color: #18e591;
       text-transform: uppercase;
       margin-bottom: 1rem;
-      line-height: 1.2;
+      line-height: 1.45;
+      @include index.minMedia(550px) {
+        line-height: 1.2;
+      }
       @include index.minMedia(800px) {
         font-size: 1.25rem;
       }
@@ -49,15 +52,15 @@
 }
 
 .h2-title {
-  font-size: 42px;
+  font-size: 35px;
   @include index.minMedia(550px) {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
   @include index.minMedia(800px) {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   @include index.minMedia(1400px) {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
   @media (max-height: 450px) and (orientation: landscape) {
     font-size: 30px;
@@ -79,6 +82,17 @@
     @media (max-height: 450px) and (orientation: landscape) {
       font-size: 24px;
     }
+  }
+}
+
+.h2-subtitle {
+  line-height: 1.43;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+  font-size: 22px;
+  font-size: 1.25rem;
+  @include index.minMedia(800px) {
+    font-size: calc(24px + 0 * ((100vw - 600px) / 1080));
   }
 }
 

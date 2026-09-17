@@ -146,7 +146,7 @@
     font-size: 22px;
     font-size: 1.25rem;
     @include index.minMedia(800px) {
-      font-size: calc(24px + 0 * ((100vw - 600px) / 1080));
+      font-size: calc(28px + 0 * ((100vw - 600px) / 1080));
     }
     &:last-child {
       margin: 0;
